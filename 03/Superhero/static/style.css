@@ -13,9 +13,8 @@ h1 {
     color: green;
 }
 
-h2 {
-    color: dodgerblue;
-    margin-top: 1em;
+a[href] {
+    color: #940000;
 }
 
 img {
