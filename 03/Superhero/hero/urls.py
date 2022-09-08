@@ -1,9 +1,10 @@
 from django.urls import path
-from .views import BlackWidow, Hero1View, IndexView, IronManView
+from .views import BouncingBoyView, AFOBView, IndexView, MatterEaterLadView
 
+# Links to the hero.html file with X Hero "as view"
 urlpatterns = [
     path('', IndexView.as_view()),
-    path('hulk', Hero1View.as_view()),
-    path('ironman', IronManView.as_view()),
-    path('blackwidow', BlackWidow.as_view()),
+    path('afob', AFOBView.as_view()),
+    path('mel', MatterEaterLadView.as_view()),
+    path('bb', BouncingBoyView.as_view()),
 ]
