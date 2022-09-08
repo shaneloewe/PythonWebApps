@@ -5,13 +5,13 @@ class IndexView(TemplateView):
     template_name = 'heroes.html'
 
 
-class HulkView(TemplateView):
+class Hero1View(TemplateView):
     template_name = 'hero.html'
 
     def get_context_data(self, **kwargs):
         return {
-            'title': 'Hulk',
-            'body': 'My name is Bruce Banner',
+            'title': 'Hero 1',
+            'body': 'My name is Hero 1',
             'image': '/static/images/hulk.jpg'
         }
 
