@@ -10,16 +10,16 @@ body * {
 }
 
 h1 {
-    color: green;
+    color: rgb(255, 255, 255);
 }
 
 a[href] {
-    color: #940000;
+    color: #d8d8d8;
 }
 
 img {
     border-radius: 50px;
-    box-shadow: 2px 2px 5px black;
+    box-shadow: 2px 2px 5px white;
     margin: 3em;
     max-width: 80%;
 }
