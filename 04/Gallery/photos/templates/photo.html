@@ -4,10 +4,10 @@
 
 {% block content %}
 
-<h3>Photo Detail</h3>
+<h3>Superhero Detail</h3>
 
 <p>
-    <img class="photo" src="/{{ photo.file }}" alt="Chapter {{ photo.id }}">
+    <img class="photo" src="/{{ photo.file }}" alt="Chapter {{ photo.id }}" width=500>
 </p>
 <p>
     CAPTION:
@@ -21,6 +21,7 @@
 <p>
     FILE PATH: {{ photo.file }}
 </p>
+<a href=".">Show all heroes</a>
 
 
 {% endblock content %}

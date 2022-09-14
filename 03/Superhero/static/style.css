@@ -5,6 +5,10 @@ body * {
     padding: 0;
 }
 
+li {
+    list-style-type: none;
+}
+
 .container {
     padding: 2em;
 }

@@ -2,9 +2,17 @@ from pathlib import Path
 from django.views.generic import TemplateView
 
 
+class PhotoView(TemplateView):
+    template_name = 'photo.html'
+
+
 def photo_list():
     def photo_details(i, f):
-        caption = f'Caption for Photo {i}' if i == 1 else None
+        captions = ['This is Arm Fall Off Boy. He can remove his left arm on command!',
+                    'This is Bouncing Boy. Self-Explanitory...',
+                    'This is Matter Eater Lad. He can eat this fence and also anything!'
+                    ]
+        caption = captions[i]
         return dict(id=i, file=f, caption=caption)
 
     photos = Path('static/images').iterdir()
