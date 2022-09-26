@@ -4,7 +4,7 @@ envs:
   value: "True"
 - key: DISABLE_COLLECTSTATIC
   scope: RUN_AND_BUILD_TIME
-  value: "0"
+  value: "1"
 name: webapps-demo
 region: nyc
 services:
