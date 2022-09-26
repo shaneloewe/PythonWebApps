@@ -28,7 +28,7 @@ class HeroDetailView(TemplateView):
     def get_context_data(self, **kwargs):
         heroes = hero_list()
         i = kwargs['id']
-        h = heroes[i]
+        h = heroes[i-1]
         return dict(hero=h)
 
 
