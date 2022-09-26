@@ -1,14 +1,21 @@
 {% extends 'theme.html' %}
 
 
-
 {% block content %}
+
 
 {% for hero in heroes %}
 
 <a href="/hero/{{ hero.file.id }}">
-    <img class="hero" src="/{{ hero.file.picture }}" alt="Chapter {{ hero.id }}" width="435">
+    <img class="photo" src="/{{ hero.file.picture }}" alt="Chapter {{ hero.id }}" width="435">
 </a>
+
+<div class="footer">
+    <div class="sidenav">
+        <a href="#about">About </a>
+        <a href="#clients">Clients</a>
+    </div>
+</div>
 
 {% endfor %}
 

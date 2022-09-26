@@ -10,7 +10,7 @@ urlpatterns = [
 
     # Photos
     path('hero/', HeroListView.as_view()),
-    path('hero/', HomeView.as_view()),
+
     path('hero/<int:id>', HeroDetailView.as_view()),
     path('admin/', admin.site.urls),
 ]
