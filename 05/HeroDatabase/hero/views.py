@@ -8,15 +8,11 @@ from .models import Hero
 
 def hero_list():
     def hero_details(i, f):
-        return dict(id=i, file=f, caption="", name="")
+        return dict(id=i, file=f)
 
     heroes = Hero.objects.all()
     heroes = [hero_details(i, f) for i, f in enumerate(heroes)]
     return heroes
-
-
-class HomeView(TemplateView):
-    template_name = 'heroDetail.html'
 
 
 class HeroListView(TemplateView):
@@ -30,7 +26,19 @@ class HeroDetailView(TemplateView):
     template_name = 'heroDetail.html'
 
     def get_context_data(self, **kwargs):
-        i = kwargs['id']
         heroes = hero_list()
-        h = heroes[i-1]
+        for j in range(len(heroes)):
+            if kwargs['id'] == j:
+                i = kwargs['id']
+            else:
+                i = j
+        h = heroes[i]
         return dict(hero=h)
+
+
+class AboutView(TemplateView):
+    template_name = 'about.html'
+
+
+class ClientView(TemplateView):
+    template_name = 'clients.html'
