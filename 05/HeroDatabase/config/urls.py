@@ -5,7 +5,6 @@ from django.urls import path
 
 
 urlpatterns = [
-    path('admin/', admin.site.urls),
     # Home
     path('', RedirectView.as_view(url='hero/')),
 
