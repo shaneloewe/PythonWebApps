@@ -1,0 +1,25 @@
+{% extends 'theme.html' %}
+
+
+
+{% block content %}
+
+<h3>Superhero Detail</h3>
+
+<p>
+    <img class="hero" src="/{{ hero.file.picture }}" alt="Chapter {{ hero.id }}" width=500>
+</p>
+<p>
+    {% if hero.file.description %}
+    {{ hero.file.description }}
+    {% else %}
+    No caption
+    {% endif%}
+</p>
+<p>
+    {{ hero.file }}
+</p>
+<a href=".">Show all heroes</a>
+
+
+{% endblock content %}
