@@ -1,0 +1,25 @@
+{% extends 'theme.html' %}
+
+
+{% block content %}
+
+<h3 style="margin-left: 35px; font-family: Georgia">Superhero Details</h3>
+
+
+<p>
+    <img class="photo" src="/{{ hero.file.picture }}" alt="Hero ID: {{ hero.id }}" width=500>
+</p>
+<p style="margin-left: 35px; font-family: Georgia">
+    {% if hero.file.description %}
+    {{ hero.file.description }}
+    {% else %}
+    No caption
+    {% endif%}
+</p>
+<p style="margin-left: 35px; font-family: Georgia">
+    {{ hero.file }}
+</p>
+<a style="margin-left: 35px; font-family: Georgia" href=".">Return to database homepage</a>
+
+
+{% endblock content %}
