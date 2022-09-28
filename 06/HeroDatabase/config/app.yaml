@@ -22,7 +22,7 @@ services:
   run_command: |
     python manage.py migrate --no-input
     gunicorn --worker-tmp-dir /dev/shm config.wsgi
-  source_dir: 05/HeroDatabase
+  source_dir: 06/HeroDatabase
 static_sites:
 - environment_slug: html
   github:
@@ -32,4 +32,4 @@ static_sites:
   name: webapps-demo-static
   routes:
   - path: /static
-  source_dir: 05/HeroDatabase/static
+  source_dir: 06/HeroDatabase/static
