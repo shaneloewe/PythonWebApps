@@ -27,10 +27,24 @@ Hero Details
                     <td>Identity</td>
                     <td>{{ object.identity }}</td>
                 </tr>
+                <tr>
+                    <td>Description</td>
+                    <td>{{ object.description }}</td>
+                </tr>
+                <tr>
+                    <td>Strengths</td>
+                    <td>{{ object.strengths }}</td>
+                </tr>
+                <tr>
+                    <td>Weaknesses</td>
+                    <td>{{ object.weaknesses }}</td>
+                </tr>
             </table>
-
             <p>
-                <a href="/add" class="btn btn-success m-5">Add New Hero</a>
+                <img class="photo" src="{{ object.image }}" alt="Hero" width=500>
+            </p>
+            <p>
+                <a href=".." class="btn btn-dark m-5">Back to List</a>
             </p>
         </div>
 
