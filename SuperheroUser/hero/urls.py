@@ -17,6 +17,7 @@ urlpatterns = [
     path("accounts/signup/", SignUpView.as_view(), name="signup"),
     path('accounts/profile/', RedirectView.as_view(url='../..')),
 
+
     # Admin views for users
     path('admin/', admin.site.urls),
     # path('admin/', include('admin.site.urls')),   Don't do this!
