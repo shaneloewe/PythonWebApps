@@ -19,10 +19,12 @@ Your Heroes
             </tr>
 
             {% for hero in object_list %}
+            {% if request.user.username == hero.author.username%}
             <tr>
                 <td><a href="/{{ hero.pk }}">{{ hero.name }}</a></td>
                 <td>{{ hero.identity }}</td>
             </tr>
+            {% endif %}
             {% endfor %}
 
         </table>
