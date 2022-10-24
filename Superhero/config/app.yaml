@@ -19,18 +19,20 @@ services:
   name: bacs350-demo-app
   routes:
   - path: /
-  run_command: |
+  run_command: |-
     python manage.py migrate --no-input
-    gunicorn --worker-tmp-dir /dev/shm config.wsgi
     python manage.py loaddata database.json
+    python manage.py build database
+    python manage.py createsuperuser --no-input
+    gunicorn --worker-tmp-dir /dev/shm config.wsgi
   source_dir: Superhero
 static_sites:
-- environment_slug: html
-  github:
-    branch: main
-    deploy_on_push: true
-    repo: shaneloewe/PythonWebApps
-  name: bacs350-demo-static
-  routes:
-  - path: /static
-  source_dir: Superhero/static
+    - environment_slug: html
+      github:
+        branch: production
+        deploy_on_push: true
+        repo: shaneloewe/PythonWebApps
+      name: urchin-app-static
+      routes:
+      - path: /static
+      source_dir: /static
