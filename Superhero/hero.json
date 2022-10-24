@@ -1,0 +1,67 @@
+[
+{
+    "model": "hero.superhero",
+    "pk": 1,
+    "fields": {
+        "name": "test",
+        "identity": "tesats",
+        "description": "NoneAig",
+        "image": "None",
+        "strengths": "None",
+        "weaknesses": "None",
+        "author": 1
+    }
+},
+{
+    "model": "hero.superhero",
+    "pk": 2,
+    "fields": {
+        "name": "2o40g",
+        "identity": "spogke",
+        "description": "None",
+        "image": "None",
+        "strengths": "None",
+        "weaknesses": "None",
+        "author": 1
+    }
+},
+{
+    "model": "hero.superhero",
+    "pk": 3,
+    "fields": {
+        "name": "shanes hero",
+        "identity": "wrpog",
+        "description": "None",
+        "image": "None",
+        "strengths": "None",
+        "weaknesses": "None",
+        "author": 3
+    }
+},
+{
+    "model": "hero.superhero",
+    "pk": 5,
+    "fields": {
+        "name": "test 4",
+        "identity": "aghr",
+        "description": "Shane's test 4 hero",
+        "image": "None",
+        "strengths": "None",
+        "weaknesses": "None",
+        "author": 3
+    }
+},
+{
+    "model": "hero.superhero",
+    "pk": 6,
+    "fields": {
+        "name": "test 5",
+        "identity": "erlghj",
+        "description": "Shanest 5",
+        "image": "None",
+        "strengths": "None",
+        "weaknesses": "None",
+        "author": 3
+    }
+}
+]
