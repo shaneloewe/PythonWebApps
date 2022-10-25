@@ -39,6 +39,8 @@ class HeroUpdateView(LoginRequiredMixin, UpdateView):
     model = Superhero
     fields = '__all__'
 
+    # This is just a test comment to see if Digital Ocean will reset my database upon a new build
+
 
 class HeroDeleteView(LoginRequiredMixin, DeleteView):
     model = Superhero
