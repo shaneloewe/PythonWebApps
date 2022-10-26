@@ -22,13 +22,13 @@ Hero Details
                 <tr>
                     <td>Name</td>
                     {% if request.user.username == object.author.username%}
-                    <td><a href="/{{ object.pk }}/">{{ object.name }}</a></td>
+                    <td><a href="./{{ object.pk }}/">{{ object.name }}</a></td>
                     {% else %}
                     <td>{{ object.name }}</td>
                     {% endif %}
 
                 </tr>
-                <tr>3
+                <tr>
                     <td>Identity</td>
                     <td>{{ object.identity }}</td>
                 </tr>
@@ -46,10 +46,12 @@ Hero Details
                 </tr>
             </table>
             <p>
-                <img class="photo" src="{{ object.image }}" alt="Hero" width=500>
+                {% if object.image != "None" %}
+                <img class="photo" src="/{{ object.image }}" alt="Hero" width=500>
+                {% endif %}
             </p>
             <p>
-                <a href=".." class="btn btn-dark m-5">Back to List</a>
+                <a href="." class="btn btn-dark m-5">Back to List</a>
             </p>
         </div>
 

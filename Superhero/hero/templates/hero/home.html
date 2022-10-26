@@ -1,0 +1,37 @@
+{% extends 'theme.html' %}
+
+
+{% block title %}
+ASH Homepage
+{% endblock title %}
+
+
+{% block content %}
+
+<div class="row">
+
+    <div class="card bg-dark text-white" style="width: 35rem; height: 25rem;">
+        <a href="hero/" class="btn btn-dark stretched-link"></a>
+        <img class="card-img" src="../../../static/images/darkhawk.jpg" alt="Card image" style="height: 100%; background-size: cover; filter: blur(10px);
+  -webkit-filter: blur(10px);">
+        <div class="card-img-overlay">
+            <h5 class="card-title">Hero Database</h5>
+            <p class="card-text">A comprehensive list of all heroes associated with ASH, compiled by our trained team of
+                moderators and editors</p>
+        </div>
+    </div>
+
+    <div class="card bg-dark text-white" style="width: 35rem; height: 25rem;">
+        <a href="article/" class="btn btn-dark stretched-link"></a>
+        <img class="card-img" src="../../../static/images/newspaper.jpg" alt="Card image" style="height: 100%; background-size: cover; filter: blur(10px);
+      -webkit-filter: blur(10px);">
+        <div class="card-img-overlay">
+            <h5 class="card-title">Articles</h5>
+            <p class="card-text" , style="color:black">Stories from ASH field reporters and investigors</p>
+
+        </div>
+    </div>
+
+</div>
+
+{% endblock content %}

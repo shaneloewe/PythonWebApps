@@ -37,45 +37,10 @@
 
         </div>
     </div>
+
+    {% block navbar %}
+    {% include 'navbar.html' %}
+    {% endblock navbar %}
 </body>
-
-<nav class="navbar navbar-expand-sm navbar-danger bg-danger text-light">
-
-    <div class="container">
-
-        <a class="navbar-brand text-light" href="/">Welcome to ASH</a>
-
-        <ul class="navbar-nav text-light ml-auto">
-
-            {% if user.is_authenticated %}
-
-            <li class="nav-item">
-                <a class="nav-link  text-light " href="{% url 'my_heroes' %}">Hello {{ user.username }}</a>
-            </li>
-            <li class="nav-item">
-                <a class="nav-link  text-light " href="{% url 'my_heroes' %}">Your Heroes</a>
-            </li>
-            <li class="nav-item">
-                <a class="nav-link  text-light " href="{% url 'logout' %}">Log out</a>
-            </li>
-
-
-            {% else %}
-
-            <li class="nav-item">
-                <a class="nav-link  text-light " href="{% url 'login' %}">Log In</a>
-            </li>
-
-            <li class="nav-item">
-                <a class="nav-link  text-light " href="{% url 'signup' %}">Sign Up</a>
-            </li>
-
-            {% endif %}
-
-        </ul>
-
-    </div>
-
-</nav>
 
 </html>

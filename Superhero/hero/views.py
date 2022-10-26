@@ -11,6 +11,12 @@ from .models import *
 from .models import Superhero, User
 
 
+class HomeView(ListView):
+    template_name = "hero/home.html"
+    model = Superhero
+    context_object_name = "home"
+
+
 class HeroListView(ListView):
     template_name = 'hero/list.html'
     model = Superhero
@@ -65,6 +71,48 @@ class UserListView(LoginRequiredMixin, ListView):
     model = User
     template_name = "user_detail.html"
 
+# ARTICLE VIEWS vvvv
+
+
+class ArticleListView(ListView):
+    model = Article
+    template_name = 'articles/list.html'
+    context_object_name = "articles"
+
+
+class ArticleCreateView(LoginRequiredMixin, CreateView):
+    template_name = "articles/add.html"
+    model = Article
+    fields = ['title', 'date', 'body', 'image']
+
+    def form_valid(self, form):
+        form.instance.investigator = self.request.user
+        return super().form_valid(form)
+
+
+class ArticleDetailView(DetailView):
+    model = Article
+    template_name = "articles/detail.html"
+    context_object_name = "article"
+
+
+class ArticleDeleteView(LoginRequiredMixin, DeleteView):
+    model = Article
+    template_name = 'articles/delete.html'
+    success_url = '..'
+
+
+class ArticleUpdateView(LoginRequiredMixin, UpdateView):
+    template_name = "articles/edit.html"
+    model = Article
+    fields = '__all__'
+
+
+class MyArticlesView(LoginRequiredMixin, ListView):
+    model = Article
+    template_name = "registration/my_articles.html"
+    context_object_name = "articles"
+    fields = '__all__'
 
 # class ArticleCreateView(LoginRequiredMixin, CreateView):
 #   template_name = "article_add.html"
