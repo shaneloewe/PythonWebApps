@@ -21,7 +21,7 @@ Your Articles
             {% for article in object_list %}
             {% if request.user.username == article.investigator.username%}
             <tr>
-                <td><a href="./{{ article.pk }}">{{ article.title }}</a></td>
+                <td><a href="../article/{{ article.pk }}">{{ article.title }}</a></td>
                 <td>{{ article.title }}</td>
             </tr>
             {% endif %}
