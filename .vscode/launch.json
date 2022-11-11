@@ -22,7 +22,7 @@
             "type": "python",
             "request": "launch",
             "program": "manage.py",
-            "cwd": "${workspaceFolder}/SuperheroUser",
+            "cwd": "${workspaceFolder}/Superhero",
             "args": [
                 "test"
             ],
@@ -34,7 +34,7 @@
             "type": "python",
             "request": "launch",
             "program": "manage.py",
-            "cwd": "${workspaceFolder}/SuperheroUser",
+            "cwd": "${workspaceFolder}/Superhero",
             "args": [
                 "runserver"
             ],

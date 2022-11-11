@@ -2,10 +2,17 @@ from django.test import SimpleTestCase, TestCase
 from hero.models import Superhero
 from django.contrib.auth.models import User
 from django.urls import reverse_lazy, reverse
+from json import dump
+
 
 print(Superhero.objects.all())
 heroes = Superhero.objects.all()
 print(len(heroes))
+data = [s for s in Superhero.objects.all().values()]
+print(data)
+# Write to JSON File
+with open("C:/Users/shane/OneDrive/Desktop/myData.json", "w") as f:
+    dump(data, f, indent=4)
 
 
 class BlogAppTest(SimpleTestCase):
@@ -34,7 +41,7 @@ print(len(users))
 class UserTest(TestCase):
     def getUser(self, userList):
         for user in userList:
-            print(type(user.username))
+            print(user.username)
 
     def test_user_list(self):
         self.getUser(users)
