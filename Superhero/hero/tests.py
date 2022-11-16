@@ -1,5 +1,5 @@
 from django.test import SimpleTestCase, TestCase
-from hero.models import Superhero
+from hero.models import Superhero, Photo
 from django.contrib.auth.models import User
 from django.urls import reverse_lazy, reverse
 from json import dump
@@ -13,6 +13,8 @@ print(data)
 # Write to JSON File
 with open("C:/Users/shane/OneDrive/Desktop/myData.json", "w") as f:
     dump(data, f, indent=4)
+
+print(Photo.objects.all())
 
 
 class BlogAppTest(SimpleTestCase):

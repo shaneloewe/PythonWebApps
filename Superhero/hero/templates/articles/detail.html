@@ -19,11 +19,12 @@
             <table class="table">
                 <tr>
                     <td>{{ object.body }}</td>
+                    <td>{{ object.image }}</td>
                 </tr>
             </table>
             <p>
-                {% if object.image != "None" %}
-                <img class="photo" src="/{{ object.image }}" alt="Hero" width=500>
+                {% if object.image != None %}
+                <img class="photo" src="../../../media/barrydillonREPORT.jpg" alt="Hero" width=500 />
                 {% endif %}
             </p>
             <p>

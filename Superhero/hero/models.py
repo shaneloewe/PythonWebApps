@@ -1,7 +1,7 @@
 
+from django.contrib.auth.models import User
 from django.db import models
 from django.urls import reverse_lazy
-from django.contrib.auth.models import User
 
 
 class Superhero(models.Model):
@@ -24,7 +24,7 @@ class Article(models.Model):
     title = models.CharField(max_length=200)
     date = models.CharField(max_length=200, default="None")
     body = models.TextField(default="None")
-    image = models.CharField(max_length=200, default="None")
+    image = models.ImageField(upload_to="", default="None")
     investigator = models.ForeignKey(
         User, on_delete=models.CASCADE, editable=False)
 
