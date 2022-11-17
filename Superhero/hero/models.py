@@ -24,7 +24,7 @@ class Article(models.Model):
     title = models.CharField(max_length=200)
     date = models.CharField(max_length=200, default="None")
     body = models.TextField(default="None")
-    image = models.ImageField(upload_to="", default="None")
+    image = models.CharField(max_length=200, default="None")
     investigator = models.ForeignKey(
         User, on_delete=models.CASCADE, editable=False)
 

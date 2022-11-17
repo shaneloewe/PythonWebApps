@@ -43,6 +43,7 @@ INSTALLED_APPS = [
     'crispy_forms',
     # My apps
     'hero',
+    'photos',
 ]
 
 MIDDLEWARE = [
@@ -55,9 +56,7 @@ MIDDLEWARE = [
     'django.middleware.clickjacking.XFrameOptionsMiddleware',
 ]
 
-ROOT_URLCONF = 'hero.urls'
-MEDIA_URL = "/media/"
-MEDIA_ROOT = os.path.join(BASE_DIR, 'media')
+ROOT_URLCONF = 'config.urls'
 
 TEMPLATES = [
     {
@@ -151,6 +150,9 @@ USE_TZ = True
 
 STATIC_URL = 'static/'
 STATICFILES_DIRS = [BASE_DIR / "static"]
+
+MEDIA_URL = 'media/'
+MEDIA_ROOT = BASE_DIR / "media"
 
 # Default primary key field type
 # https://docs.djangoproject.com/en/4.0/ref/settings/#default-auto-field
