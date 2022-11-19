@@ -2,6 +2,7 @@ from django.urls import path, include
 from .views import HeroCreateView, HeroDeleteView, HeroDetailView, HeroListView, HeroUpdateView, SignUpView, HomeView
 from .views import ArticleCreateView, ArticleDeleteView, ArticleDetailView, ArticleListView, ArticleUpdateView, MyArticlesView
 from .views import MyHeroesView
+from .views import MessageCreateView, MessageDeleteView, MessageDetailView, MessageListView, MessageUpdateView
 from django.contrib import admin
 from django.views.generic import RedirectView
 
@@ -16,6 +17,16 @@ urlpatterns = [
     path('hero/add',             HeroCreateView.as_view(),  name='hero_add'),
     path('hero/<int:pk>/',       HeroUpdateView.as_view(),  name='hero_edit'),
     path('hero/<int:pk>/delete', HeroDeleteView.as_view(),  name='hero_delete'),
+
+    # Messages
+    path('message/',            MessageListView.as_view(),    name='message_list'),
+    path('message/<int:pk>',        MessageDetailView.as_view(),
+         name='message_detail'),
+    path('message/add',             MessageCreateView.as_view(),  name='message_add'),
+    path('message/<int:pk>/',
+         MessageUpdateView.as_view(),  name='message_edit'),
+    path('message/<int:pk>/delete',
+         MessageDeleteView.as_view(),  name='message_delete'),
 
     # Article
     path('article/',                ArticleListView.as_view(),    name='article_list'),

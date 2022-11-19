@@ -87,6 +87,8 @@ DATABASES = {
     }
 }
 
+ASGI_APPLICATION = 'ChatApp.asgi.application'
+
 POSTGRES_DB = environ.get("POSTGRES_DB")  # database name
 POSTGRES_PASSWORD = environ.get("POSTGRES_PASSWORD")  # database user password
 POSTGRES_USER = environ.get("POSTGRES_USER")  # database username

@@ -9,10 +9,13 @@
             {% if user.is_authenticated %}
 
             <li class="nav-item">
+                <a class="nav-link  text-light " href="{% url 'my_heroes' %}">Hello {{ user.username }}</a>
+            </li>
+            <li class="nav-item">
                 <a class="nav-link  text-light " href="{% url 'photo_list' %}">Photos</a>
             </li>
             <li class="nav-item">
-                <a class="nav-link  text-light " href="{% url 'my_heroes' %}">Hello {{ user.username }}</a>
+                <a class="nav-link  text-light " href="{% url 'message_list' %}">Messages</a>
             </li>
             <li class="nav-item">
                 <a class="nav-link  text-light " href="{% url 'my_heroes' %}">Your Heroes</a>

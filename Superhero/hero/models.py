@@ -20,6 +20,11 @@ class Superhero(models.Model):
         return reverse_lazy('hero_list')
 
 
+class Message(models.Model):
+    title = models.CharField(max_length=200)
+    text = models.CharField(max_length=200)
+
+
 class Article(models.Model):
     title = models.CharField(max_length=200)
     date = models.CharField(max_length=200, default="None")
