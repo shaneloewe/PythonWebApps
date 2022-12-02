@@ -1,68 +1,68 @@
-# **Directed Study -- Online Chinese Language Study App Project Plan**
+# **BACS 350 Python Web Apps Project Plan**
 
 ## By Shane Loewe
 
-This Markdown imagines a Project Plan for a directed study I will be doing next semester under Moe Manshad. Client meetings were held after weeks 2, 4, 6, 8, 10, 12, and 14, denoted as milestones 1-7.
+This Markdown illustrates our Project Plan followed in BACS 350, Python Web App Development. Client meetings were held after weeks 2, 4, 6, 8, 10, 12, and 14, denoted as milestones 1-7.
 
 ## Milestone 1 :
 ### DONE
 * Past Work:
     * Set up repository on Github
-    * Set-up web hosting service for my app
+    * Set up server on Digital Ocean, facing intial struggles related to signing up through a gmail account, however, resolved
 * Future Work:
-    * In the next week we will begin developing our translation services by exploring translation APIs
-    * Work will be done from now until then to ensure content can be added to webpages on the app
+    * Begin working on a small application
+    * Familiarized ourselves with committed our code to GitHub and pulling from an upstream repo
 
 ## Milestone 2
 ### DONE
 * Past Work:
-    * Accessed a Chinese-English-Translation API
-    * Worked on the homescreen and integrated authentication and profile pages
+    * Began to utilize the Django Framework
+    * Added superhero pages using inheritance
 * Future Work:
-    * The next part of the project should be very future oriented now that the initial foundation of the app exists
-    * CSS and other front end needs are to be addressed as well as modularizing our webpages so more can be added efficiently
+    * Look into creating more pages without duplicating code
+    * Refine the CSS of the app and encorporate bootstrap styles
 
 ## Milestone 3
 ### DONE
 * Past Work:
-    * Added a User study dictionary, which users can add entries to
-    * Begin compiling our own lexicon based on the Integrated Chinese HSK Textbooks
+    * Begin to understand databases and how to access / modify their content
+    * Added superhero content and views which can be applied to new pages upon creation
 * Future Work:
-    * Make site more secure
-    * Start to think about interactive study tools to be implemented
+    * Add users and authentication
+    * Begin to understand models
 
 ## Milestone 4
 ### DONE
 * Past Work:
-    * Finished adding elementary level vocabulary to our lexicon
-    * Implemented an activities page and a drag-and-drop functionality for a future study-activity
+    * Secure site so only registered users can create hero profiles
+    * Added LogInAuthentication Mixins so only logged-in users can edit pages
 * Future Work:
-    * Plan grammar pattern practice activities as well as vocabulary activities that involve user entry
-    * Think about on-hover cards for the translation box that links to information about vocabulary if it exists in the lexicon 
+    * Think about how to better test our site
+    * Load database to the server so re-entry upon deployment in unnessecary
 
 ## Milestone 5
 ### DONE
 * Past Work:
-    * Hammered away at vocab and grammar info content, making sure that all vocabulary is displayable on efficient inherited pages
-    * Implemented on-hover cards for the translation box that links to said content
+    * Switched to a more autonomous post-gres database
+    * Encorporated complex views as to cut-down on duplicate code
 * Future Work:
-    * Add leveling system to student profile so the app can track what you have/haven't studied yet
-    * Combine grammar and vocab modules into new activites
+    * Enhance data documentation
+    * Add more functions to our webpages
 
 ## Milestone 6
 ### DONE
 * Past Work:
-    * Refined translation system by checking it against our own HSK lexicon of vocab and grammar to provide better translations 
-    * Fine-tuned the look and style of the site
+    * Added infrastructure to save and load data to and from JSON files
+    * Added ImageFields to our models so users can upload images
 * Future Work:
-    * Refine the code to remove obselete lines/clean up comments or messy code
-    * Add sound to the program
+    * Clean up site appearance
+    * Tidy-up code to remove obselete lines or comments
 
 ## Milestone 7
 ### TO DO
 * Past Work:
-    * Added sound events to certain user-events like leveling-up or completing a study guide
-    * Added inherited flashcard page where students can build flashcard decks 
+    * Added message board to the site so users may interact with one another
+    * Added and finished project plan markdown file
 * Future Work:
-    * Make finishing touches on Study app and begin user-testing
-    * Save project plan for reuse at later dates to better assist its development
+    * Make finishing touches on Superhero App, get ready for production and maintenance stages
+    * Save project plan and reuse to increase future efficiency
